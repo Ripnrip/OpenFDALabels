@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14105" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sEn-Ov-Oaw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenFDALabeling" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="la2-fA-d7G">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="afo-Sq-bky">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="afo-Sq-bky" id="ihx-e0-EyU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="la2-fA-d7G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AA6-t1-nLS"/>
+                            <constraint firstItem="la2-fA-d7G" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Lfk-LK-2M4"/>
+                            <constraint firstItem="la2-fA-d7G" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="hSs-BM-XYB"/>
+                            <constraint firstItem="la2-fA-d7G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lkg-p5-oJY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cfa-HW-yJ8"/>
+                    <connections>
+                        <outlet property="footerView" destination="wFe-IP-F1b" id="MIz-2F-7ei"/>
+                        <outlet property="loadMoreButton" destination="Vaq-VG-dDH" id="RTX-V0-UzE"/>
+                        <outlet property="loadingIndicator" destination="FAf-M5-5RP" id="OGZ-sq-Wyu"/>
+                        <outlet property="tableView" destination="la2-fA-d7G" id="b2X-se-fDS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="wFe-IP-F1b">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vaq-VG-dDH">
+                            <rect key="frame" x="71" y="0.0" width="234" height="44"/>
+                            <state key="normal" title="Load More"/>
+                            <connections>
+                                <action selector="loadMoreDrugs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dg5-YS-l1R"/>
+                            </connections>
+                        </button>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="FAf-M5-5RP">
+                            <rect key="frame" x="330" y="12" width="20" height="20"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92146831750869751" green="0.92162626981735229" blue="0.92145836353302002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="FAf-M5-5RP" firstAttribute="leading" secondItem="Vaq-VG-dDH" secondAttribute="trailing" constant="25" id="8ZQ-Xr-yG6"/>
+                        <constraint firstAttribute="bottom" secondItem="FAf-M5-5RP" secondAttribute="bottom" constant="12" id="Fpz-r0-yXZ"/>
+                        <constraint firstItem="Vaq-VG-dDH" firstAttribute="top" secondItem="wFe-IP-F1b" secondAttribute="top" id="G0w-fs-wx8"/>
+                        <constraint firstItem="FAf-M5-5RP" firstAttribute="top" secondItem="wFe-IP-F1b" secondAttribute="top" constant="12" id="Kh6-C0-fRP"/>
+                        <constraint firstAttribute="trailing" secondItem="FAf-M5-5RP" secondAttribute="trailing" constant="25" id="SrY-PN-WXw"/>
+                        <constraint firstItem="Vaq-VG-dDH" firstAttribute="centerX" secondItem="wFe-IP-F1b" secondAttribute="centerX" id="naO-DX-m1M"/>
+                        <constraint firstAttribute="bottom" secondItem="Vaq-VG-dDH" secondAttribute="bottom" id="q6s-l9-dpC"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="f1R-l0-aof"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="1079.2" y="133.5832083958021"/>
+        </scene>
+        <!--Drug Detail View Controller-->
+        <scene sceneID="SRD-OV-Tzn">
+            <objects>
+                <viewController storyboardIdentifier="DrugDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Lis-4J-kLu" customClass="DrugDetailViewController" customModule="OpenFDALabeling" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jvf-L9-Jxc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="s14-BA-9Ug">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" id="cPj-fx-Wop" customClass="DrugNameTableViewCell" customModule="OpenFDALabeling" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cPj-fx-Wop" id="Mx8-in-Qm0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZa-X1-hna">
+                                                    <rect key="frame" x="15" y="11" width="345" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="MZa-X1-hna" id="0mX-lj-Ta0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" rowHeight="138" id="DLu-cF-r1N" customClass="DrugPurposeTableViewCell" customModule="OpenFDALabeling" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="99.5" width="375" height="138"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DLu-cF-r1N" id="NN8-pp-y4X">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="137.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Purpose:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgk-nm-Yhs">
+                                                    <rect key="frame" x="15" y="11" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8CS-Ur-lhD">
+                                                    <rect key="frame" x="15" y="34" width="345" height="93"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="93" id="IxR-PB-aLp"/>
+                                                    </constraints>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Pgk-nm-Yhs" firstAttribute="leading" secondItem="NN8-pp-y4X" secondAttribute="leading" constant="15" id="3Xg-fu-6RG"/>
+                                                <constraint firstAttribute="bottom" secondItem="8CS-Ur-lhD" secondAttribute="bottom" constant="10.5" id="YXT-RM-bj0"/>
+                                                <constraint firstItem="8CS-Ur-lhD" firstAttribute="top" secondItem="Pgk-nm-Yhs" secondAttribute="bottom" constant="2" id="a5X-Ao-90X"/>
+                                                <constraint firstItem="Pgk-nm-Yhs" firstAttribute="top" secondItem="NN8-pp-y4X" secondAttribute="top" constant="11" id="aqi-S4-d6S"/>
+                                                <constraint firstAttribute="trailing" secondItem="8CS-Ur-lhD" secondAttribute="trailing" constant="15" id="l5B-ZM-spI"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pgk-nm-Yhs" secondAttribute="trailing" constant="15" id="pOH-gr-6eU"/>
+                                                <constraint firstItem="8CS-Ur-lhD" firstAttribute="leading" secondItem="NN8-pp-y4X" secondAttribute="leading" constant="15" id="wqa-sr-2YT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="purposeTextView" destination="8CS-Ur-lhD" id="BGZ-jY-MKv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell3" rowHeight="138" id="hoo-o5-Vjk" customClass="DrugInactiveIngridientsTableViewCell" customModule="OpenFDALabeling" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="237.5" width="375" height="138"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hoo-o5-Vjk" id="TSm-jI-HZt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="137.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inactive Ingredients:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tp6-sG-jO2">
+                                                    <rect key="frame" x="15" y="11" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xwK-M5-vjK">
+                                                    <rect key="frame" x="15" y="34" width="345" height="93"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xwK-M5-vjK" firstAttribute="top" secondItem="tp6-sG-jO2" secondAttribute="bottom" constant="2" id="8bq-R5-VC0"/>
+                                                <constraint firstAttribute="trailing" secondItem="tp6-sG-jO2" secondAttribute="trailing" constant="15" id="Kfb-hQ-HP9"/>
+                                                <constraint firstItem="xwK-M5-vjK" firstAttribute="leading" secondItem="TSm-jI-HZt" secondAttribute="leading" constant="15" id="Xov-mf-GuV"/>
+                                                <constraint firstAttribute="trailing" secondItem="xwK-M5-vjK" secondAttribute="trailing" constant="15" id="Zof-jS-YfT"/>
+                                                <constraint firstItem="tp6-sG-jO2" firstAttribute="top" secondItem="TSm-jI-HZt" secondAttribute="top" constant="11" id="ghr-lY-ioX"/>
+                                                <constraint firstAttribute="bottom" secondItem="xwK-M5-vjK" secondAttribute="bottom" constant="10.5" id="lu9-uA-qxs"/>
+                                                <constraint firstItem="tp6-sG-jO2" firstAttribute="leading" secondItem="TSm-jI-HZt" secondAttribute="leading" constant="15" id="z4g-A1-fCh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="inactiveIngredientsTextView" destination="xwK-M5-vjK" id="zfM-fd-9l9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell4" id="oNc-wQ-JaV" userLabel="cell4" customClass="DrugRouteTableViewCell" customModule="OpenFDALabeling" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="375.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oNc-wQ-JaV" id="Gxh-oQ-nMj">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wP-bT-wlL">
+                                                    <rect key="frame" x="15" y="11" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="6wP-bT-wlL" secondAttribute="trailing" constant="15" id="Ats-Ky-4FD"/>
+                                                <constraint firstItem="6wP-bT-wlL" firstAttribute="leading" secondItem="Gxh-oQ-nMj" secondAttribute="leading" constant="15" id="kql-MT-gBJ"/>
+                                                <constraint firstItem="6wP-bT-wlL" firstAttribute="top" secondItem="Gxh-oQ-nMj" secondAttribute="top" constant="11" id="qx0-mY-8As"/>
+                                                <constraint firstAttribute="bottom" secondItem="6wP-bT-wlL" secondAttribute="bottom" constant="11.5" id="zW1-Ph-v8X"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="routeLabel" destination="6wP-bT-wlL" id="uGI-gT-0Fp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell5" rowHeight="138" id="6z3-04-Ua6" userLabel="cell5" customClass="DrugWarningTableViewCell" customModule="OpenFDALabeling" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="419.5" width="375" height="138"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6z3-04-Ua6" id="Pkp-v7-LNW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="137.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warnings:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMw-af-nbT">
+                                                    <rect key="frame" x="15" y="11" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ehI-yw-ZjB">
+                                                    <rect key="frame" x="15" y="34" width="345" height="93"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ehI-yw-ZjB" firstAttribute="top" secondItem="HMw-af-nbT" secondAttribute="bottom" constant="2" id="WEC-6Q-il0"/>
+                                                <constraint firstAttribute="trailing" secondItem="HMw-af-nbT" secondAttribute="trailing" constant="15" id="XxB-v3-Tjj"/>
+                                                <constraint firstAttribute="trailing" secondItem="ehI-yw-ZjB" secondAttribute="trailing" constant="15" id="lpe-3E-Pjz"/>
+                                                <constraint firstItem="ehI-yw-ZjB" firstAttribute="leading" secondItem="Pkp-v7-LNW" secondAttribute="leading" constant="15" id="ltp-lf-1pl"/>
+                                                <constraint firstAttribute="bottom" secondItem="ehI-yw-ZjB" secondAttribute="bottom" constant="10.5" id="nu9-sM-PCu"/>
+                                                <constraint firstItem="HMw-af-nbT" firstAttribute="top" secondItem="Pkp-v7-LNW" secondAttribute="top" constant="11" id="oYG-D1-IdW"/>
+                                                <constraint firstItem="HMw-af-nbT" firstAttribute="leading" secondItem="Pkp-v7-LNW" secondAttribute="leading" constant="15" id="te0-gA-hir"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="warningTextView" destination="ehI-yw-ZjB" id="Bdp-Nc-sEL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell6" rowHeight="138" id="9xr-Ax-NEC" userLabel="cell6" customClass="DrugKeepOutOfReachChildrenTableViewCell" customModule="OpenFDALabeling" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="557.5" width="375" height="138"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9xr-Ax-NEC" id="Ozb-y3-6Aa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="137.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep out of reach of children:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7e0-66-OWj">
+                                                    <rect key="frame" x="15" y="11" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5qE-8d-NBM">
+                                                    <rect key="frame" x="15" y="34" width="345" height="93"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5qE-8d-NBM" firstAttribute="leading" secondItem="Ozb-y3-6Aa" secondAttribute="leading" constant="15" id="56e-x0-9jg"/>
+                                                <constraint firstAttribute="trailing" secondItem="7e0-66-OWj" secondAttribute="trailing" constant="15" id="B6q-vR-fZw"/>
+                                                <constraint firstItem="7e0-66-OWj" firstAttribute="top" secondItem="Ozb-y3-6Aa" secondAttribute="top" constant="11" id="LPU-J5-JFd"/>
+                                                <constraint firstAttribute="trailing" secondItem="5qE-8d-NBM" secondAttribute="trailing" constant="15" id="fXh-Lr-bYa"/>
+                                                <constraint firstItem="5qE-8d-NBM" firstAttribute="top" secondItem="7e0-66-OWj" secondAttribute="bottom" constant="2" id="jkf-H3-kdI"/>
+                                                <constraint firstAttribute="bottom" secondItem="5qE-8d-NBM" secondAttribute="bottom" constant="10.5" id="r8f-md-aBt"/>
+                                                <constraint firstItem="7e0-66-OWj" firstAttribute="leading" secondItem="Ozb-y3-6Aa" secondAttribute="leading" constant="15" id="u9k-m2-n9h"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="keepOutOfReachOfChildrenTextView" destination="5qE-8d-NBM" id="lej-2h-Z9D"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell7" rowHeight="93" id="Rfg-1a-6rZ" userLabel="cell7" customClass="DrugQuestionsTableViewCell" customModule="OpenFDALabeling" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="695.5" width="375" height="93"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rfg-1a-6rZ" id="Ipy-bo-3w6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="92.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More info:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xk2-LD-m6F">
+                                                    <rect key="frame" x="15" y="11" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SCM-vN-2S3">
+                                                    <rect key="frame" x="15" y="34" width="345" height="52"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xk2-LD-m6F" firstAttribute="top" secondItem="Ipy-bo-3w6" secondAttribute="top" constant="11" id="Juf-SA-MS9"/>
+                                                <constraint firstItem="SCM-vN-2S3" firstAttribute="leading" secondItem="Ipy-bo-3w6" secondAttribute="leading" constant="15" id="axk-sS-mIT"/>
+                                                <constraint firstAttribute="trailing" secondItem="SCM-vN-2S3" secondAttribute="trailing" constant="15" id="cpM-wl-rOv"/>
+                                                <constraint firstItem="SCM-vN-2S3" firstAttribute="top" secondItem="Xk2-LD-m6F" secondAttribute="bottom" constant="2" id="dCB-sb-4bF"/>
+                                                <constraint firstItem="Xk2-LD-m6F" firstAttribute="leading" secondItem="Ipy-bo-3w6" secondAttribute="leading" constant="15" id="kDo-Xx-Z2c"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xk2-LD-m6F" secondAttribute="trailing" constant="15" id="ouJ-y1-8ZL"/>
+                                                <constraint firstAttribute="bottom" secondItem="SCM-vN-2S3" secondAttribute="bottom" constant="6.5" id="wzm-Ss-Ghn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="questionsTextView" destination="SCM-vN-2S3" id="VpW-7b-TMV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="s14-BA-9Ug" firstAttribute="leading" secondItem="UHS-jL-tae" secondAttribute="leading" id="1e3-Is-I0H"/>
+                            <constraint firstItem="s14-BA-9Ug" firstAttribute="bottom" secondItem="UHS-jL-tae" secondAttribute="bottom" id="O8D-9q-BEM"/>
+                            <constraint firstItem="s14-BA-9Ug" firstAttribute="top" secondItem="jvf-L9-Jxc" secondAttribute="top" constant="20" id="Q5t-y3-T9E"/>
+                            <constraint firstItem="s14-BA-9Ug" firstAttribute="trailing" secondItem="UHS-jL-tae" secondAttribute="trailing" id="bmM-e5-n9I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UHS-jL-tae"/>
+                    </view>
+                    <connections>
+                        <outlet property="footerView" destination="cZk-bP-uhB" id="bQN-VB-f7X"/>
+                        <outlet property="tableView" destination="s14-BA-9Ug" id="c96-6T-f9K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Fb-SJ-8ao" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="cZk-bP-uhB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTZ-2N-iP3">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <state key="normal" title="View More Information"/>
+                            <connections>
+                                <action selector="loadMoreDrugs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9fb-Vd-7Gm"/>
+                                <action selector="viewMoreInformation:" destination="Lis-4J-kLu" eventType="touchUpInside" id="LTY-dF-NlL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92146831750000002" green="0.92162626979999995" blue="0.92145836349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="eTZ-2N-iP3" firstAttribute="top" secondItem="fF7-fc-bkK" secondAttribute="top" id="0cA-5K-00j"/>
+                        <constraint firstItem="eTZ-2N-iP3" firstAttribute="leading" secondItem="fF7-fc-bkK" secondAttribute="leading" id="MFe-rj-OAo"/>
+                        <constraint firstItem="eTZ-2N-iP3" firstAttribute="bottom" secondItem="fF7-fc-bkK" secondAttribute="bottom" id="YLO-rn-EQn"/>
+                        <constraint firstItem="eTZ-2N-iP3" firstAttribute="trailing" secondItem="fF7-fc-bkK" secondAttribute="trailing" id="q4d-zX-g9a"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="fF7-fc-bkK"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="1821.5999999999999" y="130.88455772113943"/>
+        </scene>
+        <!--Drug More Information View Controller-->
+        <scene sceneID="O6F-kB-3kB">
+            <objects>
+                <viewController storyboardIdentifier="DrugMoreInformationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NcN-G5-spt" customClass="DrugMoreInformationViewController" customModule="OpenFDALabeling" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pt0-Pq-Ni0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FT0-f7-GFU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FT0-f7-GFU" firstAttribute="top" secondItem="pt0-Pq-Ni0" secondAttribute="top" id="G6s-0K-m0b"/>
+                            <constraint firstItem="FT0-f7-GFU" firstAttribute="bottom" secondItem="Ibc-k8-660" secondAttribute="bottom" id="Mbb-AK-Jh3"/>
+                            <constraint firstItem="FT0-f7-GFU" firstAttribute="leading" secondItem="Ibc-k8-660" secondAttribute="leading" id="XpW-ur-HrE"/>
+                            <constraint firstItem="FT0-f7-GFU" firstAttribute="trailing" secondItem="Ibc-k8-660" secondAttribute="trailing" id="gQe-gK-Otg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ibc-k8-660"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoTextView" destination="FT0-f7-GFU" id="lir-7f-f6t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PQ5-vk-lo4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2532" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="s0x-nZ-HdA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sEn-Ov-Oaw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f4m-OB-h5c">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6Th-Z5-Sje"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7OG-Pe-yFn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

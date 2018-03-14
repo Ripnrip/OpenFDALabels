@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8415C0E720565F5700757134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8415C0E620565F5700757134 /* AppDelegate.swift */; };
+		8415C0E920565F5700757134 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8415C0E820565F5700757134 /* ViewController.swift */; };
+		8415C0EC20565F5700757134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8415C0EA20565F5700757134 /* Main.storyboard */; };
+		8415C0EF20565F5700757134 /* OpenFDALabeling.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8415C0ED20565F5700757134 /* OpenFDALabeling.xcdatamodeld */; };
+		8415C0F120565F5700757134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8415C0F020565F5700757134 /* Assets.xcassets */; };
+		8415C0F420565F5700757134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8415C0F220565F5700757134 /* LaunchScreen.storyboard */; };
+		8415C0FC20565F8C00757134 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8415C0FB20565F8C00757134 /* Networking.swift */; };
+		8415C10020565FB900757134 /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8415C0FF20565FB900757134 /* Drug.swift */; };
+		8415C102205683A900757134 /* ViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8415C101205683A900757134 /* ViewController+TableView.swift */; };
+		84420FE620582D530093C195 /* DrugDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420FE520582D530093C195 /* DrugDetailViewController.swift */; };
+		84420FE82058DB5D0093C195 /* DrugDetailViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420FE72058DB5C0093C195 /* DrugDetailViewController+TableView.swift */; };
+		84420FEC2058DE3A0093C195 /* DrugNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420FEB2058DE3A0093C195 /* DrugNameTableViewCell.swift */; };
+		84420FEE2058DE480093C195 /* DrugPurposeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420FED2058DE480093C195 /* DrugPurposeTableViewCell.swift */; };
+		84420FF02058DE550093C195 /* DrugInactiveIngridientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420FEF2058DE550093C195 /* DrugInactiveIngridientsTableViewCell.swift */; };
+		84420FF22058DE650093C195 /* DrugRouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420FF12058DE650093C195 /* DrugRouteTableViewCell.swift */; };
+		84420FF42058DE760093C195 /* DrugWarningTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420FF32058DE760093C195 /* DrugWarningTableViewCell.swift */; };
+		84420FF62058DE8B0093C195 /* DrugKeepOutOfReachChildrenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420FF52058DE8B0093C195 /* DrugKeepOutOfReachChildrenTableViewCell.swift */; };
+		84420FF82058DE960093C195 /* DrugQuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420FF72058DE960093C195 /* DrugQuestionsTableViewCell.swift */; };
+		84420FFA2059172E0093C195 /* DrugMoreInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420FF92059172E0093C195 /* DrugMoreInformationViewController.swift */; };
+		B3DF2D4864B13B3128EE070C /* Pods_OpenFDALabeling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 878491F0BF6A394DAFCA6A85 /* Pods_OpenFDALabeling.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2F41EAB86C20BE68E1175137 /* Pods-OpenFDALabeling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenFDALabeling.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenFDALabeling/Pods-OpenFDALabeling.debug.xcconfig"; sourceTree = "<group>"; };
+		7189FF9AB176499ADB9CFC91 /* Pods-OpenFDALabeling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenFDALabeling.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenFDALabeling/Pods-OpenFDALabeling.release.xcconfig"; sourceTree = "<group>"; };
+		8415C0E320565F5700757134 /* OpenFDALabeling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenFDALabeling.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8415C0E620565F5700757134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8415C0E820565F5700757134 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8415C0EB20565F5700757134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8415C0EE20565F5700757134 /* OpenFDALabeling.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OpenFDALabeling.xcdatamodel; sourceTree = "<group>"; };
+		8415C0F020565F5700757134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8415C0F320565F5700757134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8415C0F520565F5700757134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8415C0FB20565F8C00757134 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		8415C0FF20565FB900757134 /* Drug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
+		8415C101205683A900757134 /* ViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TableView.swift"; sourceTree = "<group>"; };
+		84420FE520582D530093C195 /* DrugDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDetailViewController.swift; sourceTree = "<group>"; };
+		84420FE72058DB5C0093C195 /* DrugDetailViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrugDetailViewController+TableView.swift"; sourceTree = "<group>"; };
+		84420FEB2058DE3A0093C195 /* DrugNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugNameTableViewCell.swift; sourceTree = "<group>"; };
+		84420FED2058DE480093C195 /* DrugPurposeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugPurposeTableViewCell.swift; sourceTree = "<group>"; };
+		84420FEF2058DE550093C195 /* DrugInactiveIngridientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugInactiveIngridientsTableViewCell.swift; sourceTree = "<group>"; };
+		84420FF12058DE650093C195 /* DrugRouteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugRouteTableViewCell.swift; sourceTree = "<group>"; };
+		84420FF32058DE760093C195 /* DrugWarningTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugWarningTableViewCell.swift; sourceTree = "<group>"; };
+		84420FF52058DE8B0093C195 /* DrugKeepOutOfReachChildrenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugKeepOutOfReachChildrenTableViewCell.swift; sourceTree = "<group>"; };
+		84420FF72058DE960093C195 /* DrugQuestionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugQuestionsTableViewCell.swift; sourceTree = "<group>"; };
+		84420FF92059172E0093C195 /* DrugMoreInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugMoreInformationViewController.swift; sourceTree = "<group>"; };
+		878491F0BF6A394DAFCA6A85 /* Pods_OpenFDALabeling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenFDALabeling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8415C0E020565F5700757134 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3DF2D4864B13B3128EE070C /* Pods_OpenFDALabeling.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		038FF7682ABA16E1E5097D78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				878491F0BF6A394DAFCA6A85 /* Pods_OpenFDALabeling.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8415C0DA20565F5700757134 = {
+			isa = PBXGroup;
+			children = (
+				8415C0E520565F5700757134 /* OpenFDALabeling */,
+				8415C0E420565F5700757134 /* Products */,
+				FAF7F913D4CBE5AAFC738081 /* Pods */,
+				038FF7682ABA16E1E5097D78 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8415C0E420565F5700757134 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8415C0E320565F5700757134 /* OpenFDALabeling.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8415C0E520565F5700757134 /* OpenFDALabeling */ = {
+			isa = PBXGroup;
+			children = (
+				84420FE92058DE110093C195 /* Views */,
+				8415C0FD20565F9200757134 /* Networking */,
+				8415C0FE20565FA300757134 /* Models */,
+				84420FE420582D1A0093C195 /* Controllers */,
+				8415C0E620565F5700757134 /* AppDelegate.swift */,
+				8415C0EA20565F5700757134 /* Main.storyboard */,
+				8415C0F020565F5700757134 /* Assets.xcassets */,
+				8415C0F220565F5700757134 /* LaunchScreen.storyboard */,
+				8415C0F520565F5700757134 /* Info.plist */,
+				8415C0ED20565F5700757134 /* OpenFDALabeling.xcdatamodeld */,
+			);
+			path = OpenFDALabeling;
+			sourceTree = "<group>";
+		};
+		8415C0FD20565F9200757134 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8415C0FB20565F8C00757134 /* Networking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8415C0FE20565FA300757134 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8415C0FF20565FB900757134 /* Drug.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84420FE420582D1A0093C195 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8415C0E820565F5700757134 /* ViewController.swift */,
+				8415C101205683A900757134 /* ViewController+TableView.swift */,
+				84420FE520582D530093C195 /* DrugDetailViewController.swift */,
+				84420FE72058DB5C0093C195 /* DrugDetailViewController+TableView.swift */,
+				84420FF92059172E0093C195 /* DrugMoreInformationViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		84420FE92058DE110093C195 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84420FEA2058DE170093C195 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84420FEA2058DE170093C195 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84420FEB2058DE3A0093C195 /* DrugNameTableViewCell.swift */,
+				84420FED2058DE480093C195 /* DrugPurposeTableViewCell.swift */,
+				84420FEF2058DE550093C195 /* DrugInactiveIngridientsTableViewCell.swift */,
+				84420FF12058DE650093C195 /* DrugRouteTableViewCell.swift */,
+				84420FF32058DE760093C195 /* DrugWarningTableViewCell.swift */,
+				84420FF52058DE8B0093C195 /* DrugKeepOutOfReachChildrenTableViewCell.swift */,
+				84420FF72058DE960093C195 /* DrugQuestionsTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FAF7F913D4CBE5AAFC738081 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F41EAB86C20BE68E1175137 /* Pods-OpenFDALabeling.debug.xcconfig */,
+				7189FF9AB176499ADB9CFC91 /* Pods-OpenFDALabeling.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8415C0E220565F5700757134 /* OpenFDALabeling */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8415C0F820565F5700757134 /* Build configuration list for PBXNativeTarget "OpenFDALabeling" */;
+			buildPhases = (
+				5E5FA46C3B88C847B694A976 /* [CP] Check Pods Manifest.lock */,
+				8415C0DF20565F5700757134 /* Sources */,
+				8415C0E020565F5700757134 /* Frameworks */,
+				8415C0E120565F5700757134 /* Resources */,
+				B08B1F6728816CFCA7067732 /* [CP] Embed Pods Frameworks */,
+				B861AD2D6B84FEFA7A12AF43 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenFDALabeling;
+			productName = OpenFDALabeling;
+			productReference = 8415C0E320565F5700757134 /* OpenFDALabeling.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8415C0DB20565F5700757134 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Binary Bros";
+				TargetAttributes = {
+					8415C0E220565F5700757134 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8415C0DE20565F5700757134 /* Build configuration list for PBXProject "OpenFDALabeling" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8415C0DA20565F5700757134;
+			productRefGroup = 8415C0E420565F5700757134 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8415C0E220565F5700757134 /* OpenFDALabeling */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8415C0E120565F5700757134 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8415C0F420565F5700757134 /* LaunchScreen.storyboard in Resources */,
+				8415C0F120565F5700757134 /* Assets.xcassets in Resources */,
+				8415C0EC20565F5700757134 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E5FA46C3B88C847B694A976 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpenFDALabeling-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B08B1F6728816CFCA7067732 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OpenFDALabeling/Pods-OpenFDALabeling-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenFDALabeling/Pods-OpenFDALabeling-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B861AD2D6B84FEFA7A12AF43 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenFDALabeling/Pods-OpenFDALabeling-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8415C0DF20565F5700757134 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84420FEE2058DE480093C195 /* DrugPurposeTableViewCell.swift in Sources */,
+				84420FF62058DE8B0093C195 /* DrugKeepOutOfReachChildrenTableViewCell.swift in Sources */,
+				8415C0EF20565F5700757134 /* OpenFDALabeling.xcdatamodeld in Sources */,
+				8415C0E920565F5700757134 /* ViewController.swift in Sources */,
+				8415C102205683A900757134 /* ViewController+TableView.swift in Sources */,
+				8415C0E720565F5700757134 /* AppDelegate.swift in Sources */,
+				84420FF82058DE960093C195 /* DrugQuestionsTableViewCell.swift in Sources */,
+				84420FEC2058DE3A0093C195 /* DrugNameTableViewCell.swift in Sources */,
+				8415C10020565FB900757134 /* Drug.swift in Sources */,
+				84420FF22058DE650093C195 /* DrugRouteTableViewCell.swift in Sources */,
+				84420FF02058DE550093C195 /* DrugInactiveIngridientsTableViewCell.swift in Sources */,
+				84420FE82058DB5D0093C195 /* DrugDetailViewController+TableView.swift in Sources */,
+				84420FFA2059172E0093C195 /* DrugMoreInformationViewController.swift in Sources */,
+				84420FE620582D530093C195 /* DrugDetailViewController.swift in Sources */,
+				84420FF42058DE760093C195 /* DrugWarningTableViewCell.swift in Sources */,
+				8415C0FC20565F8C00757134 /* Networking.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8415C0EA20565F5700757134 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8415C0EB20565F5700757134 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8415C0F220565F5700757134 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8415C0F320565F5700757134 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8415C0F620565F5700757134 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8415C0F720565F5700757134 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8415C0F920565F5700757134 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F41EAB86C20BE68E1175137 /* Pods-OpenFDALabeling.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Y7NBCKHJP;
+				INFOPLIST_FILE = OpenFDALabeling/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BinaryBros.OpenFDALabeling;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8415C0FA20565F5700757134 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7189FF9AB176499ADB9CFC91 /* Pods-OpenFDALabeling.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Y7NBCKHJP;
+				INFOPLIST_FILE = OpenFDALabeling/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BinaryBros.OpenFDALabeling;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8415C0DE20565F5700757134 /* Build configuration list for PBXProject "OpenFDALabeling" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8415C0F620565F5700757134 /* Debug */,
+				8415C0F720565F5700757134 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8415C0F820565F5700757134 /* Build configuration list for PBXNativeTarget "OpenFDALabeling" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8415C0F920565F5700757134 /* Debug */,
+				8415C0FA20565F5700757134 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8415C0ED20565F5700757134 /* OpenFDALabeling.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8415C0EE20565F5700757134 /* OpenFDALabeling.xcdatamodel */,
+			);
+			currentVersion = 8415C0EE20565F5700757134 /* OpenFDALabeling.xcdatamodel */;
+			path = OpenFDALabeling.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8415C0DB20565F5700757134 /* Project object */;
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14124.1" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Drug" representedClassName="Drug" syncable="YES" codeGenerationType="class">
+        <attribute name="inactiveIngredients" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="keepOutOfReachOfChildren" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="purpose" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="questions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="route" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="setID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="warning" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Drug" positionX="-63" positionY="-18" width="128" height="165"/>
+    </elements>
+</model>
